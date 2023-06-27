@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= flight.airline %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1><%= flight.airline %></h1>
+  <p><strong>Destination:</strong> <%= flight.destination %></p>
+  <p><strong>Departure:</strong> <%= flight.departure %></p>
+  <a href="/flights/<%= flight._id %>/edit">Edit</a>
+  <form action="/flights/<%= flight._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete</button>
+  </form>
+  <a href="/flights">Back to Flights</a>
+</body>
+</html>

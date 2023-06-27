@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit <%= flight.airline %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Edit <%= flight.airline %></h1>
+  <form action="/flights/<%= flight._id %>?_method=PUT" method="POST">
+    <div>
+      <label for="airline">Airline:</label>
+      <input type="text" name="airline" id="airline" value="<%= flight.airline %>" required>
+    </div>
+    <div>
+      <label for="destination">Destination:</label>
+      <input type="text" name="destination" id="destination" value="<%= flight.destination %>">
+    </div>
+    <div>
+      <label for="departure">Departure:</label>
+      <input type="text" name="departure" id="departure" value="<%= flight.departure %>">
+    </div>
+    <button type="submit">Update Flight</button>
+  </form>
+</body>
+</html>

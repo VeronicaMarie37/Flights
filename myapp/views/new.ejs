@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Flight</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>New Flight</h1>
+  <form action="/flights" method="POST">
+    <div>
+      <label for="airline">Airline:</label>
+      <input type="text" name="airline" id="airline" required>
+    </div>
+    <div>
+      <label for="destination">Destination:</label>
+      <input type="text" name="destination" id="destination">
+    </div>
+    <div>
+      <label for="departure">Departure:</label>
+      <input type="text" name="departure" id="departure">
+    </div>
+    <button type="submit">Add Flight</button>
+  </form>
+</body>
+</html>
